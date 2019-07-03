@@ -1,0 +1,50 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+@media (max-width: 420px)  {
+    .header {
+        grid-template-columns: 0.3fr repeat(12, 1fr) 0.3fr;
+    }
+}
+
+.header h1 {
+    grid-column: 2/14;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    text-align: center;
+    color: var(--light-black);
+}
+
+.galleries {
+    grid-column: 2/14;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.gallery {
+    display: block;
+    background: url(..//image/image13.png) 50% 50% no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20vw;
+}
+
+.gallery h2 {
+    margin: 0;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+}

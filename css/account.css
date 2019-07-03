@@ -1,0 +1,159 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+@media (max-width: 420px)  {
+    .header {
+        grid-template-columns: 0.3fr repeat(12, 1fr) 0.3fr;
+    }
+}
+
+.header h1 {
+    grid-column: 2/14;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    text-align: center;
+    color: var(--light-black);
+}
+
+.news_item_comments {
+    grid-column: 2/14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.news_item_comments img {
+    width: 1.3rem;
+    margin: 0 0.5rem -0.15rem;
+}
+
+.news_item_comments span {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: var(--light-grey);
+}
+
+.News_wrapper {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+@media (max-width: 420px)  {
+    .News_wrapper {
+        grid-template-columns: 0.3fr repeat(12, 1fr) 0.3fr;
+    }
+}
+
+.News_body {
+    grid-column: 2/14;
+
+    display: grid;
+    grid-template-areas:
+        "main_img main_img main_img"
+        "social_column main_text right_column";
+    grid-gap: 0.5rem;   
+    grid-template-columns: 1fr 8fr 3fr;
+    grid-template-rows: auto auto;
+}
+
+@media (max-width: 420px)  {
+    .News_body {
+        grid-template-areas:
+            "main_img main_img"
+            "social_column right_column"
+            "main_text main_text";
+        grid-gap: 0.5rem;   
+        grid-template-columns: 6fr 6fr;
+        grid-template-rows: auto auto;
+    }
+}
+
+.News_main_img {
+    grid-area: main_img;
+
+    width: 100%;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 420px)  {
+    .News_main_img {
+        grid-area: main_img;
+    
+        width: 100%;
+        margin: 1.5rem 0 0.5rem;
+    }
+}
+
+.News_body .social_column {
+    grid-area: social_column;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.News_body .social_column img {
+    width: 3.125rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 420px)  {
+    .News_body .social_column {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .News_body .social_column img {
+        width: 3.125rem;
+        margin: 0;
+        margin-right: 1rem;
+    }
+}
+
+.News_body .main_text {
+    grid-area: main_text;
+}
+
+.News_body .main_text h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+
+    color: var(--light-black);
+}
+
+.News_body .main_text p,
+.News_body .main_text a {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+
+    color: var(--light-black);
+}
+
+.News_body .main_text a {
+    color: var(--blue);
+}
+
+.News_body .right_column {
+    grid-area: right_column;
+    text-align: right;
+}
+
+.News_body .right_column time{
+    font-size: 1.5rem;
+    line-height: 3.125rem;
+    font-weight: 600;
+    color: var(--light-black);
+}

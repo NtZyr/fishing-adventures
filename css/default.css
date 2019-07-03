@@ -1,0 +1,103 @@
+/* Шерифт */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,700&display=swap&subset=cyrillic');
+
+/* ЦВЕТА */
+:root {
+    --black: #0C0D0B;
+    --light-dark-black: #191919;
+    --light-black: #262625;
+    --grey: #3F403C;
+    --light-grey: #A4A6A5;
+    --dark-white: #F4F4F4;
+    --white: #fff;
+    --dark-blue: #0576C2;
+    --blue: #039BD8;
+    --light-blue: #02C8F2;
+    --coral: #ED5D53;;
+    --main-blue: #052D39;
+    --yellow:  #FBBF23;
+}
+
+@media (max-width: 1455px)  {
+    html,
+    body {
+    font-size: 15px;
+    }
+}
+
+@media (max-width: 1365px)  {
+    html,
+    body {
+    font-size: 14px;
+    }
+}
+
+@media (max-width: 1275px)  {
+    html,
+    body {
+    font-size: 13px;
+    }
+}
+
+@media (max-width: 1080px)  {
+    html,
+    body {
+    font-size: 12px;
+    }
+}
+
+@media (max-width: 998px)  {
+    html,
+    body {
+    font-size: 11px;
+    }
+}
+
+@media (max-width: 908px)  {
+    html,
+    body {
+    font-size: 10px;
+    }
+}
+
+@media (max-width: 825px)  {
+    html,
+    body {
+    font-size: 9px;
+    }
+}
+
+@media (max-width: 740px)  {
+    html,
+    body {
+    font-size: 8px;
+    }
+}
+
+@media (max-width: 660px)  {
+    html,
+    body {
+    font-size: 7px;
+    }
+}
+
+@media (max-width: 580px)  {
+    html,
+    body {
+    font-size: 6px;
+    }
+}
+
+@media (max-width: 495px)  {
+    html,
+    body {
+    font-size: 5px;
+    }
+}
+
+@media (max-width: 420px)  {
+    html,
+    body {
+    font-size: 8px;
+    }
+}

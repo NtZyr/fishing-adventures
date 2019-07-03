@@ -1,0 +1,132 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
+
+@media (max-width: 420px)  {
+    .header {
+        grid-template-columns: 0.3fr repeat(12, 1fr) 0.3fr;
+    }
+}
+
+.header h1 {
+    grid-column: 2/14;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.7rem;
+    text-align: center;
+    color: var(--light-black);
+}
+
+.years {
+    grid-column: 2/14; 
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    color: var(--light-black);
+}
+
+.year {
+    padding: 0.3rem 0.5rem;
+    border: none;
+    background: transparent;
+    outline: none;
+    border-right: 1px solid var(--light-grey);
+}
+
+.year:first-child {
+    padding: 0.3rem 0.5rem;
+    border-right: none;
+}
+
+.News {
+    margin: 3rem 0;
+}
+
+.News_item {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    padding: 1rem 0;
+}
+
+@media (max-width: 420px)  {
+    .News_item {
+        grid-template-columns: 0.3fr repeat(12, 1fr) 0.3fr;
+    }
+}
+
+.News_item::after {
+    content: "";
+    display: block;
+    grid-column: 2/14;
+    border-bottom: 1px solid var(--light-grey);
+    padding: 1rem 0;
+}
+
+.News_item:last-child::after {
+    display: none;
+}
+
+.News_item_img {
+    grid-column: 2/5;
+    width: 100%;
+    padding-right: 3rem;
+}
+
+.News_item_info {
+    grid-column: 5/14;
+}
+
+@media (max-width: 420px)  {
+    .News_item_info {
+        grid-column: 2/14;
+    }
+}
+
+.News_header {
+    display: flex;
+    align-items: center;
+}
+
+.News_header .date {
+    margin-right: auto;
+
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    color: var(--light-black);
+}
+
+.News_header img {
+    width: 1.3rem;
+    margin: 0 0.5rem -0.15rem 0;
+}
+
+.News_header .comments {
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: var(--light-grey);
+}
+
+.News_item_info h2 {
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    color: var(--blue);
+    margin: 0;
+    padding: 0;
+}
+
+.News_item_info p {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    color: var(--light-black);
+    margin: 0;
+    padding: 0;
+}

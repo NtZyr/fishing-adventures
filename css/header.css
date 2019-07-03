@@ -1,0 +1,240 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+
+body > header {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-gap: 3rem;
+    background: url(../image/placeholder_1.png) 50% 50% no-repeat;
+    background-size: cover;
+    color: var(--white);
+    
+}
+
+.header_items {
+    grid-column: 2/14;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    left: 0;
+}
+
+.header_items  h1,
+.mobile_nav  h1  {
+    color: var(--white);
+    font-size: 3rem !important;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.subtitle {
+    text-align: right;
+    grid-row: 2;
+    grid-column: 9/15;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 2.25rem !important;
+    margin-right: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold !important;
+}
+
+.social {
+    grid-column: 1/5;
+    grid-row: 3;
+    margin-left: 2rem;
+}
+
+.social img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.social .youtube {
+    width: 2.5rem;
+    height: 2rem;
+}
+
+nav {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav li a {
+    font-size: 0.9375rem !important;
+    display: flex;
+    align-items: center;
+    margin: 0 0.5rem !important;
+    padding: 0.3rem 0.5rem !important;
+    font-weight: bold;
+    color: var(--white);
+}
+
+nav li ul {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    top: 2rem;
+    left: -25%;
+    opacity:0; 
+	transition: all 0.3s ease; 
+}
+
+
+nav li:hover ul {
+    opacity: 1;
+
+}
+
+nav li ul li {
+    margin-top: 0.5rem;
+    position: relative;
+    min-width: 4rem;
+}
+
+nav li ul li::before {
+    content: "|";
+    position: absolute;
+    top: -50%;
+    left: 50%;
+}
+
+.search {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+nav li a:visited {
+    color: var(--white);
+}
+
+nav li a:hover {
+    color: var(--white);
+    text-decoration: none;
+    border-bottom: 0.1rem solid var(--white);
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+}
+
+nav li ul li a:hover,
+nav li:nth-last-child(3) a:hover{
+    border-bottom: none;
+}
+
+.mobile_nav {
+    margin: 0;
+    padding: 1rem 0;
+    width: 100%;
+    background: var(--light-black);
+    grid-column: 1/15;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile_nav h1{
+    font-size: 2rem !important;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile_nav img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.mobile_nav .burger {
+    width: 4rem;
+    height: 4rem;
+}
+
+.mobile_nav  ul{
+    display: none;
+    width: 100%;
+    background: var(--light-black);
+    grid-column: 1/15;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.mobile_nav ul li {
+    display: block;
+    width: 100%;
+    height: 6rem;
+}
+
+.mobile_nav ul li a{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.7rem !important;
+}
+
+.mobile_nav ul li a:hover{
+    border: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label.toggleMenu {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+input.toggleMenu:checked ~ ul {
+    display: flex;
+}
+
+
+@media (min-width: 420px) {
+    .mobile_nav {
+        display: none;
+    } 
+}
+
+@media (max-width: 420px) {
+    .header_items,
+    header h2,
+    .social {
+        display: none;
+    }
+
+    body > header {
+        height: 20vh;
+        grid-gap: 0;
+    }   
+
+}
+
